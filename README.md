@@ -1,3 +1,8 @@
+# Source
+https://github.com/FirebaseExtended/codelab-kanban-fire/tree/create-a-project
+
+https://codelabs.developers.google.com/codelabs/building-a-web-app-with-angular-and-firebase
+
 # FirebaseTrivia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.3.
