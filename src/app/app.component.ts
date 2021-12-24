@@ -1,4 +1,4 @@
-import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 import { Task } from './task/task';
 
@@ -21,15 +21,22 @@ export class AppComponent {
   inProgress: Task[] = [];
   done: Task[] = [];
 
-  editTask(list: string, task: Task): void {}
+  editTask(list: string, task: Task): void { }
 
   drop(event: CdkDragDrop<Task[]>): void {
     if (event.previousContainer === event.container) {
+      console.log("Moving tasks within swimlane")
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      )
       return;
     }
     if (!event.container.data || !event.previousContainer.data) {
       return;
     }
+
     transferArrayItem(
       event.previousContainer.data,
       event.container.data,
