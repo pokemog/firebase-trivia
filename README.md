@@ -1,7 +1,7 @@
 # Source
 https://github.com/FirebaseExtended/codelab-kanban-fire/tree/create-a-project
 
-https://codelabs.developers.google.com/codelabs/building-a-web-app-with-angular-and-firebase
+https://developers.google.com/codelabs/building-a-web-app-with-angular-and-firebase
 
 # FirebaseTrivia
 
