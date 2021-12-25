@@ -1,6 +1,8 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Task } from './task/task';
+import { TaskDialogComponent, TaskDialogResult } from './task-dialog/task-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -21,11 +23,28 @@ export class AppComponent {
   inProgress: Task[] = [];
   done: Task[] = [];
 
+  constructor(private dialog: MatDialog) { }
+
   editTask(list: string, task: Task): void { }
+
+  newTask(): void {
+    const dialogRef = this.dialog.open(TaskDialogComponent, {
+      width: '270px',
+      data: {
+        task: {},
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result: TaskDialogResult | undefined) => {
+      if (!result) {
+        return;
+      }
+      this.todo.push(result.task);
+    });
+  }
 
   drop(event: CdkDragDrop<Task[]>): void {
     if (event.previousContainer === event.container) {
-      console.log("Moving tasks within swimlane")
       moveItemInArray(
         event.container.data,
         event.previousIndex,
