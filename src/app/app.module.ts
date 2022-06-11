@@ -22,7 +22,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     TaskDialogComponent
   ],
   imports: [
-    AppRoutingModule,    
+    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     DragDropModule,

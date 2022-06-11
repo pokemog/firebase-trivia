@@ -1,15 +1,27 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppComponent } from './app.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { TaskComponent } from './task/task.component';
+import { MatCardModule } from '@angular/material/card';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MatDialogModule,
+        MatIconModule,
+        MatToolbarModule,
+        DragDropModule,
+        MatCardModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        TaskComponent
       ],
     }).compileComponents();
   });
@@ -20,16 +32,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'firebase-trivia'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('firebase-trivia');
-  });
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('firebase-trivia app is running!');
+    expect(compiled.querySelector('mat-toolbar span').textContent).toContain('Trivia');
   });
 });
