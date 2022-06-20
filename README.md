@@ -1,3 +1,6 @@
+# Status
+[![Node.js CI](https://github.com/pokemog/firebase-trivia/actions/workflows/node.js.yml/badge.svg)](https://github.com/pokemog/firebase-trivia/actions/workflows/node.js.yml)
+
 # Source
 https://github.com/FirebaseExtended/codelab-kanban-fire/tree/create-a-project
 
