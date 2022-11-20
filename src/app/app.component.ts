@@ -9,6 +9,7 @@ import { TaskDialogComponent, TaskDialogResult } from './task-dialog/task-dialog
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   todo: Task[] = [
     {
