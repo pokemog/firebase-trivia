@@ -30,7 +30,7 @@
     "@angular/cli": "^15.0.0",
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.0.3",
-    "@types/node": "^18.7.23",
+    "@types/node": "^18.11.10",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~4.3.0",
     "jasmine-spec-reporter": "~7.0.0",
