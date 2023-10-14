@@ -27,10 +27,18 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.5",
+    "@angular-eslint/builder": "16.2.0",
+    "@angular-eslint/eslint-plugin": "16.2.0",
+    "@angular-eslint/eslint-plugin-template": "16.2.0",
+    "@angular-eslint/schematics": "16.2.0",
+    "@angular-eslint/template-parser": "16.2.0",
     "@angular/cli": "^16.2.5",
     "@angular/compiler-cli": "^16.2.8",
     "@types/jasmine": "~4.3.5",
     "@types/node": "^20.6.0",
+    "@typescript-eslint/eslint-plugin": "5.48.2",
+    "@typescript-eslint/parser": "5.48.2",
+    "eslint": "^8.33.0",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~5.1.1",
     "jasmine-spec-reporter": "~7.0.0",
@@ -40,7 +48,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.1.0",
     "ts-node": "~10.9.1",
-    "tslint": "~6.1.0",
     "typescript": "~5.1.6"
   }
 }
