@@ -78,18 +78,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "firebase-trivia:build"
+            "buildTarget": "firebase-trivia:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "firebase-trivia:build:production"
+              "buildTarget": "firebase-trivia:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "firebase-trivia:build"
+            "buildTarget": "firebase-trivia:build"
           }
         },
         "test": {
