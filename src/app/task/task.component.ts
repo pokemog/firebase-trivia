@@ -5,7 +5,7 @@ import { Task } from './task';
     selector: 'app-task',
     templateUrl: './task.component.html',
     styleUrls: ['./task.component.css'],
-    standalone: false
+    
 })
 export class TaskComponent implements OnInit {
   @Input() task: Task | null = null;

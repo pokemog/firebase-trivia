@@ -6,7 +6,7 @@ import { Task } from '../task/task';
     selector: 'app-task-dialog',
     templateUrl: './task-dialog.component.html',
     styleUrls: ['./task-dialog.component.css'],
-    standalone: false
+    
 })
 export class TaskDialogComponent {
   private backupTask: Partial<Task> = { ...this.data.task };
