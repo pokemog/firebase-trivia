@@ -3,9 +3,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Task } from '../task/task';
 
 @Component({
-  selector: 'app-task-dialog',
-  templateUrl: './task-dialog.component.html',
-  styleUrls: ['./task-dialog.component.css']
+    selector: 'app-task-dialog',
+    templateUrl: './task-dialog.component.html',
+    styleUrls: ['./task-dialog.component.css'],
+    standalone: false
 })
 export class TaskDialogComponent {
   private backupTask: Partial<Task> = { ...this.data.task };
