@@ -20,23 +20,24 @@ describe('TaskDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
+    imports: [
         MatInputModule,
         MatDialogModule,
         FormsModule,
-        BrowserAnimationsModule
-      ],
-      declarations: [TaskDialogComponent],
-      providers: [
+        BrowserAnimationsModule,
+        TaskDialogComponent
+    ],
+    providers: [
         {
-          provide: MAT_DIALOG_DATA,
-          useValue: {}
+            provide: MAT_DIALOG_DATA,
+            useValue: {}
         },
         {
-          provide: MatDialogRef,
-          useValue: {}
-        }]
-    }).compileComponents();
+            provide: MatDialogRef,
+            useValue: {}
+        }
+    ]
+}).compileComponents();
   });
 
   beforeEach(() => {
