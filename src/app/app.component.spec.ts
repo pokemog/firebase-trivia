@@ -11,19 +11,17 @@ import { MatCardModule } from '@angular/material/card';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
+    imports: [
         RouterTestingModule,
         MatDialogModule,
         MatIconModule,
         MatToolbarModule,
         DragDropModule,
-        MatCardModule
-      ],
-      declarations: [
-        AppComponent,
-        TaskComponent
-      ],
-    }).compileComponents();
+        MatCardModule,
+        TaskComponent,
+        AppComponent
+    ],
+}).compileComponents();
   });
 
   it('should create the app', () => {

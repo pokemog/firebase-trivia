@@ -1,13 +1,21 @@
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray, transferArrayItem, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Task } from './task/task';
 import { TaskDialogComponent, TaskDialogResult } from './task-dialog/task-dialog.component';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIcon } from '@angular/material/icon';
+import { MatButton } from '@angular/material/button';
+import { MatCard } from '@angular/material/card';
+import { NgIf, NgFor } from '@angular/common';
+import { TaskComponent } from './task/task.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: true,
+    imports: [MatToolbar, MatIcon, MatButton, MatCard, CdkDropList, NgIf, NgFor, TaskComponent, CdkDrag]
 })
 
 export class AppComponent {
