@@ -14,7 +14,6 @@ import { TaskComponent } from './task/task.component';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    standalone: true,
     imports: [MatToolbar, MatIcon, MatButton, MatCard, CdkDropList, NgIf, NgFor, TaskComponent, CdkDrag]
 })
 

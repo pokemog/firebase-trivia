@@ -7,7 +7,6 @@ import { MatCard } from '@angular/material/card';
     selector: 'app-task',
     templateUrl: './task.component.html',
     styleUrls: ['./task.component.css'],
-    standalone: true,
     imports: [NgIf, MatCard]
 })
 export class TaskComponent implements OnInit {
