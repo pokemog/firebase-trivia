@@ -10,7 +10,6 @@ import { MatButton } from '@angular/material/button';
     selector: 'app-task-dialog',
     templateUrl: './task-dialog.component.html',
     styleUrls: ['./task-dialog.component.css'],
-    standalone: true,
     imports: [MatFormField, MatLabel, MatInput, FormsModule, MatDialogActions, MatButton, MatDialogClose]
 })
 export class TaskDialogComponent {
