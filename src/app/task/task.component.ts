@@ -16,7 +16,7 @@ export class TaskComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const myNotUseVar = "Hello";
+    const myNotUseVar = "Hello task component";
     console.log(myNotUseVar);
   }
 }

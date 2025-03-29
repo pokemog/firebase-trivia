@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,7 +11,6 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
     imports: [
-        RouterTestingModule,
         MatDialogModule,
         MatIconModule,
         MatToolbarModule,

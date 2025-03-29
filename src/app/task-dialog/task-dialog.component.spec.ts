@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import {
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogModule,
+} from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Task } from '../task/task';
@@ -10,34 +14,34 @@ describe('TaskDialogComponent', () => {
   let component: TaskDialogComponent;
   let fixture: ComponentFixture<TaskDialogComponent>;
   let mockTask: Task = {
-    title: "Test Title",
-    description: "Test Description"
-  }
+    title: 'Test Title',
+    description: 'Test Description',
+  };
   let mockTaskDialogData: TaskDialogData = {
     task: mockTask,
-    enableDelete: true
-  }
+    enableDelete: true,
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [
+      imports: [
         MatInputModule,
         MatDialogModule,
         FormsModule,
         BrowserAnimationsModule,
-        TaskDialogComponent
-    ],
-    providers: [
+        TaskDialogComponent,
+      ],
+      providers: [
         {
-            provide: MAT_DIALOG_DATA,
-            useValue: {}
+          provide: MAT_DIALOG_DATA,
+          useValue: {},
         },
         {
-            provide: MatDialogRef,
-            useValue: {}
-        }
-    ]
-}).compileComponents();
+          provide: MatDialogRef,
+          useValue: {},
+        },
+      ],
+    }).compileComponents();
   });
 
   beforeEach(() => {
