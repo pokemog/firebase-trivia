@@ -13,8 +13,12 @@
 
       <mat-card appearance="outlined" cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="todo"
         [cdkDropListConnectedTo]="[doneList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
-        <p class="empty-label" *ngIf="todo.length === 0">Empty list</p>
-        <app-task (edit)="editTask('todo', $event)" *ngFor="let task of todo" cdkDrag [task]="task"></app-task>
+        @if (todo.length === 0) {
+          <p class="empty-label">Empty list</p>
+        }
+        @for (task of todo; track task) {
+          <app-task (edit)="editTask('todo', $event)" cdkDrag [task]="task"></app-task>
+        }
       </mat-card>
     </div>
 
@@ -23,9 +27,13 @@
 
       <mat-card appearance="outlined" cdkDropList id="inProgress" #inProgressList="cdkDropList" [cdkDropListData]="inProgress"
         [cdkDropListConnectedTo]="[todoList, doneList]" (cdkDropListDropped)="drop($event)" class="list">
-        <p class="empty-label" *ngIf="inProgress.length === 0">Empty list</p>
-        <app-task (edit)="editTask('inProgress', $event)" *ngFor="let task of inProgress" cdkDrag [task]="task">
-        </app-task>
+        @if (inProgress.length === 0) {
+          <p class="empty-label">Empty list</p>
+        }
+        @for (task of inProgress; track task) {
+          <app-task (edit)="editTask('inProgress', $event)" cdkDrag [task]="task">
+          </app-task>
+        }
       </mat-card>
     </div>
     <div class="container">
@@ -33,8 +41,12 @@
 
       <mat-card appearance="outlined" cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done"
         [cdkDropListConnectedTo]="[todoList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
-        <p class="empty-label" *ngIf="done.length === 0">Empty list</p>
-        <app-task (edit)="editTask('done', $event)" *ngFor="let task of done" cdkDrag [task]="task"></app-task>
+        @if (done.length === 0) {
+          <p class="empty-label">Empty list</p>
+        }
+        @for (task of done; track task) {
+          <app-task (edit)="editTask('done', $event)" cdkDrag [task]="task"></app-task>
+        }
       </mat-card>
     </div>
   </div>
