@@ -16,7 +16,7 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
 import { MatCard } from '@angular/material/card';
-import { NgIf, NgFor } from '@angular/common';
+
 import { TaskComponent } from './task/task.component';
 
 @Component({
@@ -29,11 +29,9 @@ import { TaskComponent } from './task/task.component';
     MatButton,
     MatCard,
     CdkDropList,
-    NgIf,
-    NgFor,
     TaskComponent,
-    CdkDrag,
-  ],
+    CdkDrag
+],
 })
 export class AppComponent {
   todo: Task[] = [
