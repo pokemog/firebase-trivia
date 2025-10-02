@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialogActions, MatDialogClose } from '@angular/material/dialog';
 import { Task } from '../task/task';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
@@ -13,12 +13,10 @@ import { MatButton } from '@angular/material/button';
     imports: [MatFormField, MatLabel, MatInput, FormsModule, MatDialogActions, MatButton, MatDialogClose]
 })
 export class TaskDialogComponent {
-  private backupTask: Partial<Task> = { ...this.data.task };
+  dialogRef = inject<MatDialogRef<TaskDialogComponent>>(MatDialogRef);
+  data = inject<TaskDialogData>(MAT_DIALOG_DATA);
 
-  constructor(
-    public dialogRef: MatDialogRef<TaskDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: TaskDialogData
-  ) { }
+  private backupTask: Partial<Task> = { ...this.data.task };
 
   cancel(): void {
     this.data.task.title = this.backupTask.title;
