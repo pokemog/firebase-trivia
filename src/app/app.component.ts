@@ -5,7 +5,7 @@ import {
   CdkDropList,
   CdkDrag,
 } from '@angular/cdk/drag-drop';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Task } from './task/task';
 import {
@@ -34,6 +34,8 @@ import { TaskComponent } from './task/task.component';
 ],
 })
 export class AppComponent {
+  private dialog = inject(MatDialog);
+
   todo: Task[] = [
     {
       title: 'Buy milk',
@@ -46,8 +48,6 @@ export class AppComponent {
   ];
   inProgress: Task[] = [];
   done: Task[] = [];
-
-  constructor(private dialog: MatDialog) {}
 
   editTask(list: string, task: Task): void {}
 
