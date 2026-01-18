@@ -1,4 +1,4 @@
-import { enableProdMode, importProvidersFrom } from '@angular/core';
+import { enableProdMode, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 
 import { environment } from './environments/environment';
 import { AppRoutingModule } from './app/app-routing.module';
@@ -20,7 +20,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(AppRoutingModule, BrowserModule, DragDropModule, FormsModule, MatButtonModule, MatCardModule, MatDialogModule, MatIconModule, MatInputModule, MatToolbarModule),
+        provideZoneChangeDetection(),importProvidersFrom(AppRoutingModule, BrowserModule, DragDropModule, FormsModule, MatButtonModule, MatCardModule, MatDialogModule, MatIconModule, MatInputModule, MatToolbarModule),
         provideAnimations()
     ]
 })
