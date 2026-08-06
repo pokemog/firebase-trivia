@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialogActions, MatDialogClose } from '@angular/material/dialog';
 import { Task } from '../task/task';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
@@ -10,6 +10,7 @@ import { MatButton } from '@angular/material/button';
     selector: 'app-task-dialog',
     templateUrl: './task-dialog.component.html',
     styleUrls: ['./task-dialog.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatFormField, MatLabel, MatInput, FormsModule, MatDialogActions, MatButton, MatDialogClose]
 })
 export class TaskDialogComponent {
