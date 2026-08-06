@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Task } from './task';
 
 import { MatCard } from '@angular/material/card';
@@ -7,6 +7,7 @@ import { MatCard } from '@angular/material/card';
     selector: 'app-task',
     templateUrl: './task.component.html',
     styleUrls: ['./task.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatCard]
 })
 export class TaskComponent implements OnInit {
