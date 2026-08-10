@@ -7,7 +7,7 @@ import { MatCard } from '@angular/material/card';
     selector: 'app-task',
     templateUrl: './task.component.html',
     styleUrls: ['./task.component.css'],
-    changeDetection: ChangeDetectionStrategy.Eager,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [MatCard]
 })
 export class TaskComponent implements OnInit {

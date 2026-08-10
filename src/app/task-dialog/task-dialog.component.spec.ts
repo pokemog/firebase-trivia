@@ -13,11 +13,11 @@ import { TaskDialogComponent, TaskDialogData } from './task-dialog.component';
 describe('TaskDialogComponent', () => {
   let component: TaskDialogComponent;
   let fixture: ComponentFixture<TaskDialogComponent>;
-  let mockTask: Task = {
+  const mockTask: Task = {
     title: 'Test Title',
     description: 'Test Description',
   };
-  let mockTaskDialogData: TaskDialogData = {
+  const mockTaskDialogData: TaskDialogData = {
     task: mockTask,
     enableDelete: true,
   };
