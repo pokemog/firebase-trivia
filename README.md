@@ -22,13 +22,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Running end-to-end tests
+
+Run `npm run e2e` to execute the end-to-end tests via [Playwright](https://playwright.dev/). The test runner will automatically start the dev server. To run against a single project (e.g. Chromium only), use `npm run e2e -- --project=chromium`.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
