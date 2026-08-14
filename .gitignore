@@ -46,6 +46,11 @@ testem.log
 # Firebase cache folder
 .firebase
 
+# Playwright output
+/playwright-report/
+/test-results/
+/blob-report/
+
 # System Files
 .DS_Store
 Thumbs.db

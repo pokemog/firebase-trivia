@@ -1,11 +1,7 @@
 // @ts-check
 const eslint = require("@eslint/js");
-// import eslint from "@eslint/js";
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
-// import angular from "angular-eslint";
-// import tseslint from 'typescript-eslint';
-// import { defineConfig } from "eslint/config";
 
 module.exports = tseslint.config(
   {
